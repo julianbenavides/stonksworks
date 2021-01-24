@@ -15,8 +15,16 @@
     font-weight: italic;
 }
 
+@keyframes line {
+  0% {
+    background-position-x: 390px;
+  }
+}
+
+
 body {
     background-color: #262626;
+    box-sizing: border-box;
     padding: 5px;
     font-family: Crimson;
     font-size: 26px;
@@ -40,33 +48,77 @@ a:visited {
     color: #FFE26D;
 }
 
-#topmenu {
-    margin: 0px;
-    padding: 0;
+#topmenu *,
+#topmenu *:before,
+#topmenu *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1.1px;
 }
 
+
 #topmenu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 300px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 #topmenu ul li {
-    margin: 0;
-    padding: 0;
+    width: 125px;
+    height: 50px;
+    transition: background-position-x 0.9s linear;
+    text-align: center;
+}
+
+#topmenu ul li:hover {
+    background: url('../svg/menu_underline.svg');
+    animation: line 1.8s;
+}
+
+#topmenu ul li:hover a {
+    color: #5cc7ff;
+}
+
+#topmenu ul li:not(:last-child) {
+    margin-right: 30px;
 }
 
 #topmenu ul li a {
+    font-size: 22px;
+    color: #777;
+    text-decoration: none;
+    transition: all 0.45s;
+}
+
+#topmenu ul .logo {
+    width: 200px;
+    height: 200px;
+}
+
+#topmenu ul .logo:hover {
+    background: none;
+}
+
+#topmenu ul .logo a {
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     margin: 0px auto 0px auto;
-    background-image: url('../images/logo_400x400.png');
+    background-image: url('../images/logo_200x200.png');
     background-repeat: no-repeat;
     background-position: 0px 0px;
 }
 
-#topmenu ul li a span {
+#topmenu ul .logo:hover a {
+    background-image: url('../images/logo_blue_400x400.png');
+}
+
+#topmenu ul .logo a span {
     display: none;
 }
 
