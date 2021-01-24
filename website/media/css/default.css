@@ -1,0 +1,25 @@
+body {
+    background-color: #ffffff;
+    font=face: verdana;
+    font-size: 12px;
+}
+
+h1 {
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 20px auto 2px auto;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+#container .block {
+    padding:5px 0px 20px 5px;
+}
+
+#container .middle {
+    border-bottom: 1px dotted #000000;
+}
